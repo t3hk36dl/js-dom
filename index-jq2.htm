@@ -1,0 +1,46 @@
+<h1>Bar Checker-Powered by jQuery</h1>
+
+<input placeholder="Nhập tuổi vào bar..." />
+<br><br>
+<button>Kiểm Tra</button>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+<script>
+    // kịch bản trang web
+
+    $('button').click(function () {
+
+        // Lấy ra giá trị tuổi mà user nhập vào
+        tuổi = $('input').val();
+
+        // Nếu tuổi lớn hơn hoặc bằng 18 thì 
+        // thông báo được vào
+        // bôi xanh hộp nhập liệu
+        if// nếu
+            (tuổi >= 18) {
+            alert("Bạn đã trưởng thành, đủ tuổi vào bar, xin mời !");
+            $('input').css({
+                'box-shadow': '0 0 10px green',
+                'border':'2px solid darkgreen'
+            });
+
+            return; // chấm dứt
+        }
+
+        alert("Bạn chưa trưởng thành, xin mời ra ngoài !!!");
+        
+
+        $('input').css({
+            'box-shadow': '0 0 10px red',
+            'border':'2px solid darkred'
+        });
+
+
+        // Ngược lại thì 
+        // thông báo không được vào
+        // bôi đỏ hộp nhập liệu
+
+    });
+</script>
